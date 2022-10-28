@@ -12,7 +12,6 @@
   - [Azure Registered Devices](#azure-registered-devices)
     - [Registering a device](#registering-a-device)
   - [Azure Multi-Factor Authentication (MFA)](#azure-multi-factor-authentication-mfa)
-    - [How to enable MFA](#how-to-enable-mfa)
   - [Azure Self-Service Password Reset (SSPR)](#azure-self-service-password-reset-sspr)
     - [Enabling SSPR](#enabling-sspr)
 
@@ -95,10 +94,10 @@ The following additional forms of verification can be used with Azure AD Multi-F
 
 To enable MFA there are some pre-requisites:
 
-- A working Azure AD Tenant with Azure AD Premium P1 license
+- A working Azure AD Tenant with Azure AD Premium P1 license*
 - An account with 'Conditional access administrator', 'Security Administrator' or 'Global adminsitrator' privileges.
 
-### How to enable MFA
+* MFA can be achieved using a free license but you will need to apply the default security rules which means you do not have the granular control of users and scenarios.
 
 ## Azure Self-Service Password Reset (SSPR)
 
