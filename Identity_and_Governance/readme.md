@@ -14,6 +14,10 @@
   - [Azure Multi-Factor Authentication (MFA)](#azure-multi-factor-authentication-mfa)
   - [Azure Self-Service Password Reset (SSPR)](#azure-self-service-password-reset-sspr)
     - [Enabling SSPR](#enabling-sspr)
+  - [Role Based Access Control (RBAC)](#role-based-access-control-rbac)
+    - [Security Principle](#security-principle)
+  - [Management Groups](#management-groups)
+    - [Important facts about management groups](#important-facts-about-management-groups)
 
 
 ## 'New' Identity and Governance Portal
@@ -119,3 +123,37 @@ Under 'Self service password reset enabled' select the option required - 'None',
 If you choose 'selected' you will need to choose the groups that are allowed to use SSPR, shown below.
 
 ![x](images/enable_sspr.png)
+
+## Role Based Access Control (RBAC)
+
+Azure RBAC is an authorisation system built on Azure Resource Managere that provides fine-grained access management to resources.
+
+Owner : full access to all resources and can grant access.
+Contributor : can create and manage all resources, cannot grant access.
+Reader : Can view existing resources.
+
+Deny assignment overrules any roles that are currently set.
+
+### Security Principle
+
+A security principle is an object that represents a user, group, service principle or a managed identity that requests access to resources.
+
+![x](images/rbac-security-principal.png)
+
+## Management Groups
+
+Management groups are used to efficiently manage access, policies and compliance.
+
+![x](images/MG_tree.png)
+
+Management groups are a way to organise resources into a hierachy for unified policy and access management as shown in the image above.
+
+### Important facts about management groups
+
+- 10,000 management groups can be supported in a single directory.
+- A management group tree can support up to six levels of depth.
+  - This limit doesn't include the Root level or the subscription level.
+- Each management group and subscription can only support one parent.
+- Each management group can have many children.
+- All subscriptions and management groups are within a single hierarchy in each directory.
+
