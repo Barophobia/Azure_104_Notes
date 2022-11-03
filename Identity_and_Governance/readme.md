@@ -18,6 +18,8 @@
     - [Security Principle](#security-principle)
   - [Management Groups](#management-groups)
     - [Important facts about management groups](#important-facts-about-management-groups)
+  - [Azure Policies](#azure-policies)
+    - [Policy Concepts](#policy-concepts)
 
 
 ## 'New' Identity and Governance Portal
@@ -148,6 +150,8 @@ Management groups are used to efficiently manage access, policies and compliance
 
 Management groups are a way to organise resources into a hierachy for unified policy and access management as shown in the image above.
 
+Subscriptions within a group will inherit policies applied to the group.
+
 ### Important facts about management groups
 
 - 10,000 management groups can be supported in a single directory.
@@ -156,4 +160,35 @@ Management groups are a way to organise resources into a hierachy for unified po
 - Each management group and subscription can only support one parent.
 - Each management group can have many children.
 - All subscriptions and management groups are within a single hierarchy in each directory.
+
+## Azure Policies
+
+Used to create, assign and manage policy definitions in the azure environment, this ensures that resources are always compliant with your requirements.
+
+Azure Policy does not automatically apply remediations but can give you a view on resources that aren't meeting the policy rules.
+
+Resources are evaluated at specific times during the resource lifecycle, the policy assignment lifecycle, and for refular ongoing compliance evaluation.
+
+*Resources will be evaluated when:*
+
+- A resource is created or updated in a scope with a policy assignment
+- A policy or initiative is newly assigned to a scope
+- A policy or initiative already assigned to a scope is updated.
+- During the standard compliance evaluation cycle, this occurs once every 24 hours.
+
+Once the resource has been evaluated you can choose how to respond to the evaluation. An example of this regarding a non-compliant resource could be:
+
+- Denying the resource change
+- Logging the change to the resource
+- Altering the resource before the change
+- Altering the resource after the change
+- Deploying related compliant resources
+
+### Policy Concepts
+
+A policy definition is a rule.
+
+An initiative is a collection of policy definitions.
+
+An assignment is the application of an initiative or policy to a specific scope.
 
