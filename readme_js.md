@@ -2,7 +2,14 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [John Savill Video Notes](#john-savill-video-notes)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Identity and Azure AD](#identity-and-azure-ad)
+  - [Cost management](#cost-management)
+  - [Tagging](#tagging)
+  - [Regions, cloud and Availability Zones](#regions-cloud-and-availability-zones)
+  - [Azure firewall](#azure-firewall)
 
 ## About
 
@@ -31,3 +38,39 @@ Registered devices allow a device to be known and managed by a tenant for exampl
 
 Joined devices grant all the options of a registered device but also allows the user to login using their AAD account.
 
+## Cost management
+
+Inside the azure portal you can go into cost management and use the tools provided to allow you to have insight into where the costs are coming from.
+
+Inside the cost management tool you can create a budget for example when a certain percentage of the budget is sent, send an email to a specific group so that you are always aware of what is being spent.
+
+With the cost management tool you can also view cost forecasts which is an estimate of how much you will spend this month based on your previous usage, this will help with cost planning.
+
+You can also use advisor recommendations which will help you to scale appropriately to your uses and minimise costs where neccesary.
+
+## Tagging
+
+Tags are an option to add some metadata to a resource, resource group or subscription this will allow you to easily find specific resources for example having a dev tag on a resource so that you know it is not contributing to the prod or the costcenter tag so finance knows what specific areas of the company are spending.
+
+Using policies you can force tags to be added based on the definitions rules.
+
+## Regions, cloud and Availability Zones
+
+Regions are the geographic breakdown of the azure network for example west US and east US.
+
+There are multiple clouds inside of Azure for example 'Azure china cloud' or 'Azure US Government cloud' these are used by the respective communities for example the us government use the US government cloud and not the public Azure instance.
+
+Regions breakdown in to availability zones.
+
+## Azure firewall
+
+Azure firewall is deployed into a vNet into its own /26 subnet, this is an azure native firewall.
+
+The firewall rules are different to NSG rules.
+
+Rules:
+    - Nat > DNAT
+    - Network - Level 4 rules
+    - Application - Level 7 Rules
+
+Implemented by routing as the next hop in the routing table.
