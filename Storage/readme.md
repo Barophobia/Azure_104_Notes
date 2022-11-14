@@ -15,6 +15,9 @@
         - [Account SAS](#account-sas)
       - [Forms of SAS](#forms-of-sas)
       - [How SAS works](#how-sas-works)
+      - [When to use SAS](#when-to-use-sas)
+      - [Best practices with SAS](#best-practices-with-sas)
+    - [Azure Active Directory Integration](#azure-active-directory-integration)
 
 ## Storage Access Control
 
@@ -81,4 +84,27 @@ An account SAS is secured with the storage account key. An account SAS delegates
 
 #### How SAS works
 
-A shared access signature is a signed URI that points to one or more storage resources. The URI includes a token that contains a special set of query parameters.
+A shared access signature is a signed URI that points to one or more storage resources. The URI includes a token that contains a special set of query parameters. The token indicates how the resources may be accessed by the client. The signature is constructed from the SAS parameters and signed with the key that was used to create the SAS. This signature is used by Azure storage to authorise access to the storage resource.
+
+![SAS URI Example](images/sas-storage-uri.png)
+
+#### When to use SAS
+
+A SAS should be used to give secure access to resources in a storage account to any client who does not otherwise have permissions to that resource.
+
+#### Best practices with SAS
+
+When you use SAS in your applications, you need to be aware of these two potential risks:
+    - If a SAS is leaked, it cna be used by anyone who obtains it.
+    - If a SAS provided to a client application expires and the application is unable to retrieve a new SAS from the service, the applications functionality may be hindered.
+
+Recommendations:
+    - Always use HTTPS to create and/or distribute a SAS
+    - Use a user delegation SAS when possible (AD Auth SAS)
+    - Have a revocation plan in place
+    - Configure a SAS Expiration policy
+    - Create a stored access policy for a service SAS
+
+### Azure Active Directory Integration
+
+You can use AAD for authorising requests to blob, queue and table resources. Microsoft recommends using Azure AD credentials to authorize requests to data when possible for optimal security and ease of use.
