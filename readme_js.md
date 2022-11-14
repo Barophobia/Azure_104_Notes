@@ -10,6 +10,9 @@
   - [Tagging](#tagging)
   - [Regions, cloud and Availability Zones](#regions-cloud-and-availability-zones)
   - [Azure firewall](#azure-firewall)
+  - [Azure DNS Services](#azure-dns-services)
+  - [Vnet to on-prem](#vnet-to-on-prem)
+  - [ExpressRoute](#expressroute)
 
 ## About
 
@@ -74,3 +77,36 @@ Rules:
     - Application - Level 7 Rules
 
 Implemented by routing as the next hop in the routing table.
+
+Best practice to have a firewall per region due to latency issues.
+
+## Azure DNS Services
+
+Azure has public and internal DNS Solutions.
+
+A virtual network can be configured to automatically register any resource with the private DNS Zone.
+
+If you want to talk to an Azure private zone from an on prem network you will need to set up some form of dns forwarding from azure.
+
+## Vnet to on-prem
+
+You will need a VPN Gateway, it is recommended for the Gateway subnet to be /27.
+
+There are two types of VPN -
+    - **Policy / Static routing**
+      - This only supports 1 tunnel and only used on the basic VPN SKU
+    - **Route based**
+      - Any amount of tunnels
+      - Point 2 Site VPN supported
+      - ExpressRoute Supported
+
+VPN connections are over the internet using IPSec.
+
+Bandwidth is aggregate not per user.
+
+## ExpressRoute
+
+This is a private connection to the Azure backbone network a result of this is that communication to the network does not go over the internet.
+
+Price is based on the speed and egress (Outbound data), ingress is always unlimited with no cost attached.
+
