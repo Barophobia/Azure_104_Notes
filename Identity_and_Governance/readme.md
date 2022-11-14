@@ -191,4 +191,3 @@ A policy definition is a rule.
 An initiative is a collection of policy definitions.
 
 An assignment is the application of an initiative or policy to a specific scope.
-
