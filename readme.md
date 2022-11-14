@@ -14,6 +14,10 @@ The breakdown of notes are based on these requirements (Storage, Compute etc.).
 
 Due to azure being updated constantly it is best to look at the microsoft provided docs to get the latest information as some of the notes here may be out of date. Link: [Microsoft Docs](https://learn.microsoft.com/en-us/azure/?product=popular)
 
+**A Global map of the Azure Infrastructure:**
+
+[Azure Global Infrastructure Map](https://infrastructuremap.microsoft.com/explore)
+
 ## Efficient use
 
 The content is very longform so I recommend using the table of contents or finding a topic and searching through the relevant files using the browser function.
