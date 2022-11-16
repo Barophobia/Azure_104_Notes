@@ -9,6 +9,9 @@
     - [Storage explorer](#storage-explorer)
     - [AzCopy](#azcopy)
     - [Databox](#databox)
+      - [Benefits](#benefits)
+      - [Specifications](#specifications)
+      - [Databox Components](#databox-components)
     - [Datafactory](#datafactory)
   - [Performance tiers](#performance-tiers)
   - [Storage account resiliency](#storage-account-resiliency)
@@ -56,6 +59,40 @@ Databox is the azure solution that lets you send terabytes of data into and out 
 You can order the data box via the azure portal. Once the device is received, you can quickly set it up using the local web UI.
 
 ![Databox webUI](images/databox_webui.png)
+
+Import use cases:
+  
+- Onetime Migration:
+    When a large amount of on-prem data needs to be moved to azure.
+
+- Initial bulk transfer (Seedbox):
+    An initial bulk transfer is done using Data box (seed) follow by incremental transfers over the network.
+
+Export use cases:
+
+- Disaster recovery of a large amount of data:
+    When a copy of the data from azure is needed to be restored to an on-prem environment.
+
+- Migration back to on prem:
+    When you want to move all the data back to on-prem or another cloud service provider.
+
+#### Benefits
+
+**Speed** - Databox uses 1-Gbps or 10Gbps network interfaces to move data in and out of azure
+
+**Secure** - Databox has built in security protects:
+    - The device has a rugged casing secured by tamper resistant screws and tamper evident stickers.
+    - The data on the device is encrpyted with AES-256 encryption at all times.
+    - The device can only be unlocked with a password provided in the Azure portal
+    - Once the data from an import order is uploaded to azure,, the disks on the device are wiped clean in accordance with NIST 800-88r1 standards.
+
+#### Specifications
+
+![Databox Specs](images/databox_specs.png)
+
+#### Databox Components
+
+![Databox_view](images/data-box-combined.png)
 
 ### Datafactory
 
