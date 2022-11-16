@@ -4,6 +4,14 @@
 
 - [Storage](#storage)
   - [Table of Contents](#table-of-contents)
+  - [Storage Accounts](#storage-accounts)
+  - [Interaction tools](#interaction-tools)
+    - [Storage explorer](#storage-explorer)
+    - [AzCopy](#azcopy)
+    - [Databox](#databox)
+    - [Datafactory](#datafactory)
+  - [Performance tiers](#performance-tiers)
+  - [Storage account resiliency](#storage-account-resiliency)
   - [Storage Access Control](#storage-access-control)
     - [Shared Account Keys](#shared-account-keys)
       - [Protect your access keys](#protect-your-access-keys)
@@ -18,6 +26,51 @@
       - [When to use SAS](#when-to-use-sas)
       - [Best practices with SAS](#best-practices-with-sas)
     - [Azure Active Directory Integration](#azure-active-directory-integration)
+
+## Storage Accounts
+
+Storage accounts contain all of your azure storage data objects, including blobs, file shares, queues, tables and disks, on creation they must have a unique name (This is unique to the whole of azure not just your subscription) and allows access from anywhere in the world over HTTP or HTTPS.
+
+## Interaction tools
+
+There are many ways to interact with data that is stored on azure, the easiest being through the azure portal.
+
+### Storage explorer
+
+The storage explorer application is provided by microsoft, using this you can connect to different storage accounts and resource allocated to the account you have signed in to.
+
+You can also use this tool to upload data to a storage resource. 
+
+![storage explorer](images/storage_explorer.png)
+
+### AzCopy
+
+AZCopy is a command-line utility that you can use to copy blobs or files to and from a storage account.  To use AZCopy you must authorise using either Azure Active Directory or a SAS Token. AZCopy can be used to create containers, upload and download data. 
+
+![azcopy Example](images/azcopy.png)
+
+### Databox
+
+Databox is the azure solution that lets you send terabytes of data into and out of azure in a quick, inexpensive and reliable way. The secure data transfer is accelerated by shipping a proprietary storage device to the user to put their data on and send back, currently the maximum usable storage capacity is 80TB. The device has rugged casing to protect and secure data during the transit.
+
+You can order the data box via the azure portal. Once the device is received, you can quickly set it up using the local web UI.
+
+![Databox webUI](images/databox_webui.png)
+
+### Datafactory
+
+## Performance tiers
+
+Standard
+Premium
+Hot/Cool/Archive
+
+
+## Storage account resiliency
+
+LRS
+GRS
+GZRS
 
 ## Storage Access Control
 

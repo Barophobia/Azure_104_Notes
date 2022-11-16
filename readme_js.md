@@ -13,6 +13,8 @@
   - [Azure DNS Services](#azure-dns-services)
   - [Vnet to on-prem](#vnet-to-on-prem)
   - [ExpressRoute](#expressroute)
+  - [Storage](#storage)
+    - [Performance tiers](#performance-tiers)
 
 ## About
 
@@ -109,4 +111,14 @@ Bandwidth is aggregate not per user.
 This is a private connection to the Azure backbone network a result of this is that communication to the network does not go over the internet.
 
 Price is based on the speed and egress (Outbound data), ingress is always unlimited with no cost attached.
+
+## Storage
+
+### Performance tiers
+
+The higher the tier you store the more it cools but the transactions are lower cost.
+
+Tiers can be manually set but there are also automation options that can be set through the lifecycle management.
+
+Lifecycle management rules can be set so that after X days a file will change the access tier automatically so that you aren't always paying the highest price.
 
