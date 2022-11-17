@@ -128,9 +128,17 @@ With ZRS,your data is  still accessible for both read and write operations even 
 
 ![ZRS](images/zone-redundant-storage.png)
 
+ZRS provides excellent performance, low latency and resiliency for your data if it becomes temporarily unavailable. However, ZRS by itself may not protect your data against a regional disaster where multiple zones are permanently affected.
+
 #### GRS
 
+Geo-Redundant Storage copies your data synchronously three times within a single physical location in the primary region using LRS, then it copies the data asynchronously to a single physical location in a secondary region, when the data is written to the second region it is then replication within that location using LRS. GRS provides availability of at least 16 nines ove ra given year.
+
+![GRS](images/geo-redundant-storage.png)
+
 #### GZRS
+
+Geo-Zone-Redundant-Storage
 
 ## Storage Access Control
 
