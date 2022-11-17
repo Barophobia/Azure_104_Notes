@@ -138,7 +138,7 @@ Geo-Redundant Storage copies your data synchronously three times within a single
 
 #### GZRS
 
-Geo-Zone-Redundant-Storage
+Geo-Zone-Redundant-Storage combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS Storage account is copied across three azure availability zones in the primary region and is also replicated to a secondary geographic region for protection from regional disasters.
 
 ## Storage Access Control
 
