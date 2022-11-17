@@ -12,9 +12,13 @@
       - [Benefits](#benefits)
       - [Specifications](#specifications)
       - [Databox Components](#databox-components)
-    - [Datafactory](#datafactory)
   - [Performance tiers](#performance-tiers)
   - [Storage account resiliency](#storage-account-resiliency)
+    - [Types of redundancy](#types-of-redundancy)
+      - [Locally Redundant Storage (LRS)](#locally-redundant-storage-lrs)
+      - [Zone Redundant Storage (ZRS)](#zone-redundant-storage-zrs)
+      - [GRS](#grs)
+      - [GZRS](#gzrs)
   - [Storage Access Control](#storage-access-control)
     - [Shared Account Keys](#shared-account-keys)
       - [Protect your access keys](#protect-your-access-keys)
@@ -94,20 +98,39 @@ Export use cases:
 
 ![Databox_view](images/data-box-combined.png)
 
-### Datafactory
-
 ## Performance tiers
 
 Standard
 Premium
 Hot/Cool/Archive
 
-
 ## Storage account resiliency
 
-LRS
-GRS
-GZRS
+Azure storage always stores multiple copies of your data so that it's protected from planned and unplanned events. Redundancy ensures that a storage account always meets its availability and durability targets even when failures occur.
+
+When deciciding which resiliency option to choose there are tradeoffs that will need to be considered for example lower costs and higher availability.
+
+### Types of redundancy
+
+#### Locally Redundant Storage (LRS)
+
+Locally redundant storage replicates your storage account three times within a single data center in the primary region. LRS provides atleast 11 nines uptime over a given year.
+
+LRS is the lowest cost redundancy option and offers the least durability compared to other options. LRS protects your data against server rack and drive failures. However, if a disaster such as a fire or flood occurs within the data center, all replicas of a storage account using LRS may be lost or unrecoverable.
+
+![LRS](images/locally-redundant-storage.png)
+
+#### Zone Redundant Storage (ZRS)
+
+Zone redundant storage replicates your storage account synchronously across three azure availability zones in the primary region. Each availability zone is a seperate physical location with independent power, cooling and networking. ZRS provides availability of at least 12 nines over a given year.
+
+With ZRS,your data is  still accessible for both read and write operations even if a zone is down. If a zone becomes unavailable azure will deal with the networking updates such as DNS repointing, this may take some time to complete so an application may have temporary issues before the networking has been updated.
+
+![ZRS](images/zone-redundant-storage.png)
+
+#### GRS
+
+#### GZRS
 
 ## Storage Access Control
 
