@@ -18,6 +18,14 @@ Due to azure being updated constantly it is best to look at the microsoft provid
 
 [Azure Global Infrastructure Map](https://infrastructuremap.microsoft.com/explore)
 
+## Resources used
+
+[Azure Administrator Certification (AZ-104) - FreeCodeCamp](https://www.youtube.com/watch?v=10PbGbTUSAg)
+
+[AZ-104 Microsoft Azure Administrator Associate Certification SUPER Study Cram - John Savill](https://www.youtube.com/watch?v=VOod_VNgdJk)
+
+[Free Online Microsoft Training](https://learn.microsoft.com/en-gb/certifications/exams/az-104)
+
 ## Efficient use
 
 The content is very longform so I recommend using the table of contents or finding a topic and searching through the relevant files using the browser function.
