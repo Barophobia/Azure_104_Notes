@@ -13,6 +13,7 @@
       - [Specifications](#specifications)
       - [Databox Components](#databox-components)
   - [Performance tiers](#performance-tiers)
+  - [Access tiers](#access-tiers)
   - [Storage account resiliency](#storage-account-resiliency)
     - [Types of redundancy](#types-of-redundancy)
       - [Locally Redundant Storage (LRS)](#locally-redundant-storage-lrs)
@@ -102,7 +103,14 @@ Export use cases:
 
 Standard
 Premium
-Hot/Cool/Archive
+
+## Access tiers
+
+**Hot** - A tier optimised for storing data that is accessed or modified frequently. The hot tier has the highest storage costs, but lowest access costs.
+
+**Cool** - A tier optimised for storing data that is infrequently accessed or modified. Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
+
+**Archive** - An offline tier omptimised for storing data that is rarely accessed with flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days.
 
 ## Storage account resiliency
 
@@ -139,6 +147,10 @@ Geo-Redundant Storage copies your data synchronously three times within a single
 #### GZRS
 
 Geo-Zone-Redundant-Storage combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS Storage account is copied across three azure availability zones in the primary region and is also replicated to a secondary geographic region for protection from regional disasters.
+
+With a GZRS storage account you are able to continue to read and write data if an availability zone becomes unavailable or is unrecoverable. Additionally, your data is ptoected in the case of a complete regional outage or a disaster in which the primary region isn't recoverable. GZRS is designed to provide at least 16 nines of availability over a given year.
+
+![GZRS](images/geo-zone-redundant-storage.png)
 
 ## Storage Access Control
 
