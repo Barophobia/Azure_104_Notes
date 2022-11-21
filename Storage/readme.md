@@ -12,7 +12,6 @@
       - [Benefits](#benefits)
       - [Specifications](#specifications)
       - [Databox Components](#databox-components)
-  - [Performance tiers](#performance-tiers)
   - [Access tiers](#access-tiers)
   - [Storage account resiliency](#storage-account-resiliency)
     - [Types of redundancy](#types-of-redundancy)
@@ -98,11 +97,6 @@ Export use cases:
 #### Databox Components
 
 ![Databox_view](images/data-box-combined.png)
-
-## Performance tiers
-
-Standard
-Premium
 
 ## Access tiers
 
